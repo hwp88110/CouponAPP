@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/coupon_background">
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_orange"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:id="@+id/titleblue">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:text="我的最爱"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:id="@+id/title"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/liketitle"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/others"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/others"
+                android:onClick="others" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36sp"
+        android:background="@color/background_zjqxx"
+        android:id="@+id/title11"
+        android:layout_below="@id/titleblue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_like"
+            android:layout_marginTop="6sp"
+            android:textSize="20sp"
+            android:layout_marginLeft="8sp"
+            android:textColor="@color/text_xx"
+            android:layout_centerVertical="false"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="0dip"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/listline"
+        android:layout_below="@id/title11"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <ListView
+        android:id="@+id/listview_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#D8D8D8"
+        android:dividerHeight="1px" >
+
+    </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

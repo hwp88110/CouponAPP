@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+
+
+        exclude 'META-INF/services/com.fasterxml.jackson.core.ObjectCodec'
+        exclude 'META-INF/services/com.fasterxml.jackson.core.JsonFactory'
+        exclude 'META-INF/maven/com.squareup.okhttp/okhttp/pom.properties'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okhttp/okhttp/pom.xml'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.properties'
+        exclude 'META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml'
+        exclude 'META-INF/maven/com.wilddog.client/wilddog-core-android/pom.xml'
+        exclude 'META-INF/maven/com.wilddog.client/wilddog-core-android/pom.properties'
+        exclude 'META-INF/maven/com.wilddog.client/wilddog-auth-android/pom.xml'
+        exclude 'META-INF/maven/com.wilddog.client/wilddog-auth-android/pom.properties'
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+
+        }
+    }
+    defaultConfig {
+        applicationId "com.edu.pu.cs.couponapp"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "v1.0.1 build0304"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations{compile.exclude group:"org.json",module:"json"}
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-appindexing:9.6.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.hejunlin.superindicatorlibray:superindicatorlibray:1.0.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.firebase:firebase-database:9.6.1'
+    compile 'com.firebase:firebase-client-android:2.3.1'
+    compile 'com.google.firebase:firebase-storage:9.6.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.google.firebase:firebase-messaging:9.6.1'
+    compile 'me.xiaopan:sketch:2.3.0-beta7'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile project(':gridviewimage')
+
+    compile 'com.github.traex.rippleeffect:library:1.3'
+    compile 'com.github.medyo:fancybuttons:1.8.2'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.github.niorgai:StatusBarCompat:2.0.0'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.0@aar'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.anzewei:parallaxbacklayout:0.5'
+    compile project(':PushSDK')
+    compile 'com.wilddog.client:wilddog-sync-android:2.2.0'
+
+
+
+
+}
+apply plugin: 'com.google.gms.google-services'

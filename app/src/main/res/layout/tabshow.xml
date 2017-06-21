@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@android:id/tabhost"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <FrameLayout android:id="@android:id/tabcontent" 
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"/>
+        <TabWidget android:id="@android:id/tabs" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+             />
+           <RadioGroup
+             android:id="@+id/tab_items"
+             android:gravity="center_vertical"
+             android:layout_width="fill_parent"
+               android:orientation="horizontal"
+             android:layout_gravity="bottom"
+             android:background="@drawable/tabback_1"
+               android:layout_height="52sp">
+                <RadioButton
+                   android:id="@+id/tab_item_home"
+                   android:checked="false"
+                   style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/item_home_bg"
+                    android:text="首页"
+                    android:textSize="11sp"
+                    android:textColor="@drawable/color_radiobtn_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="-4dp"
+                    android:layout_weight="1"/>
+
+               <RadioButton
+                  android:id="@+id/tab_item_search"
+                  style="@style/main_tab_bottom"
+                   android:drawableTop="@drawable/item_search_bg"
+                   android:text="搜索"
+                   android:textSize="11sp"
+                   android:textColor="@drawable/color_radiobtn_text"
+                   android:layout_width="match_parent"
+                   android:checked="false"
+                   android:drawablePadding="-4dp"
+                   android:layout_weight="1"/>
+
+               <RadioButton
+                   android:id="@+id/tab_item_like"
+                   style="@style/main_tab_bottom"
+                   android:drawableTop="@drawable/item_like_bg"
+                   android:text="最爱"
+                   android:textSize="11sp"
+                   android:textColor="@drawable/color_radiobtn_text"
+                    android:layout_width="match_parent"
+                    android:checked="false"
+                   android:drawablePadding="-4dp"
+                   android:layout_weight="1"/>
+           </RadioGroup>
+         
+    </LinearLayout>
+
+</TabHost>

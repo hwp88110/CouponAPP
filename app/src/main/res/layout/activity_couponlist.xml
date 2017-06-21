@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/coupon_background">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_orange"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:id="@+id/titleblue">>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="backbtn"
+                android:background="@drawable/back" />
+            <ImageView
+                android:id="@+id/titlelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+
+                />
+
+            <Button
+                android:id="@+id/gomap"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/googlemaps"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:onClick="gomap" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36sp"
+        android:background="@color/background_zjqxx"
+        android:id="@+id/title11"
+        android:layout_below="@id/titleblue">
+
+        <TextView
+            android:text="优惠信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_xx"
+            android:layout_marginTop="6sp"
+            android:textSize="18sp"
+            android:layout_marginLeft="8sp"
+            android:textColor="@color/text_xx"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="0dip"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/listline"
+        android:layout_below="@id/title11"/>
+    <ListView
+        android:id="@+id/listview_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

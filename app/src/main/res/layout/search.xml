@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@color/white"
+        android:inputType="textCapWords"
+        android:imeOptions="actionSearch"
+        android:background="@color/background_color_blue"
+        android:layout_height="40dp" />
+
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.gridviewimage.view.controls.ImageGridView
+            android:id="@+id/image_gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:columnWidth="60dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="back_color">#ea5413</color>
+    <color name="adColor">#fffcda</color>
+    <color name="background_color_blue">#ea5413</color>
+    <color name="background">#f6f6f6</color>
+    <color name="sort_title_back">#eeeeee</color>
+    <color name="color_textlogo">#808080</color>
+    <color name="title">#f6f6f6</color>
+    <color name="searchbar">#ea5413</color>
+    <color name="background_color_orange">#ea5413</color>
+    <color name="background_zjqxx">#f5f5f5</color>
+    <color name="text_xx">#707070</color>
+    <color name="coupon_background">#fafafa</color>
+    <color name="detailstext_color">#737373</color>
+    <color name="xxx">#f7fbf7</color>
+    <color name="tab_text_color_normal">#5f646e</color>
+    <color name="tab_text_color_selected">#ea5413</color>
+    <color name="focusColor">#ff5b14</color>
+    <color name="detail_bigline">#f2f2f2</color>
+    <color name="listline">#a2a2a2</color>
+
+    <color name="homebottom_text">#5f646e</color>
+
+    <color name="dialog_text_yes">#38ADFF</color>
+    <color name="dialog_text_no">#7D7D7D</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorOranges">#FF6600</color>
+
+
+    <color name="colorBlack">#333333</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorYellow">#fbc23d</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorFrechGray">#cccccc</color>
+    <color name="colorOrange">#f5aa00</color>
+    <color name="divide">#e0e0e0</color>
+    <color name="emptyview_background">#F0EFF4</color>
+</resources>

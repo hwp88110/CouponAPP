@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 上半段 -->
+    <LinearLayout
+        android:id="@+id/titleblue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/background_color_blue"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/hometitle"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- 中间段 -->
+    <!--<RelativeLayout android:layout_width="fill_parent"-->
+    <!--android:layout_height="0.0dip"-->
+    <!--android:layout_weight="2.0"-->
+    <!--android:background="#e6e6e6"-->
+    <!--&gt;-->
+    <!--<Gallery android:id="@+id/home_gallery_showpic"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dip"-->
+    <!--android:spacing="25dip" />-->
+
+    <!--</RelativeLayout>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6">
+
+        <com.hejunlin.superindicatorlibray.LoopViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_400dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_gravity="bottom">
+
+            <com.hejunlin.superindicatorlibray.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                />
+
+
+        </FrameLayout>
+    </FrameLayout>
+    <!-- 下半段 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/adview"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:background="@color/adColor"
+                android:onClick="adclick"
+                android:showDividers="beginning"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/adimageview"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/adshow" />
+
+                <TextView
+                    android:id="@+id/adtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_toRightOf="@id/adimageview"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/adcontent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adtitle"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_toRightOf="@id/adimageview"
+                    android:text=" "
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/btlinearlayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30sp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sort_title_back">
+
+                        <ImageView
+                            android:id="@+id/imageicon_1"
+                            android:layout_width="45px"
+                            android:layout_height="45px"
+                            android:layout_centerHorizontal="false"
+                            android:layout_centerInParent="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginTop="5sp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_1" />
+
+                        <TextView
+                            android:id="@+id/sorttitle_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_toRightOf="@id/imageicon_1"
+                            android:text="@string/home_bus1"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120sp"
+                    android:layout_below="@id/btlinearlayout_1"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/logotext_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageLogo_1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5sp"
+                            android:text="@string/home_bus1_kfc"
+                            android:textColor="@color/color_textlogo" />
+
+                        <ImageView
+                            android:id="@+id/imageLogo_1"
+                            android:layout_width="110sp"
+                            android:layout_height="84sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="false"
+                            android:layout_marginTop="10sp"
+                            android:onClick="kfc_click"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/kfc" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/logotext_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageLogo_2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6sp"
+                            android:text="@string/home_bus1_mc"
+                            android:textColor="@color/color_textlogo" />
+
+                        <ImageView
+                            android:id="@+id/imageLogo_2"
+                            android:layout_width="110sp"
+                            android:layout_height="83sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10sp"
+                            android:onClick="mcd_click"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/mcdonald" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/logotext_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageLogo_3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5sp"
+                            android:text="@string/home_bus1_bk"
+                            android:textColor="@color/color_textlogo" />
+
+                        <ImageView
+                            android:id="@+id/imageLogo_3"
+                            android:layout_width="110sp"
+                            android:layout_height="84sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="false"
+                            android:layout_marginTop="10sp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/burgerking" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/btlinearlayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sort_title_back">
+
+                    <ImageView
+                        android:id="@+id/imageicon_2"
+                        android:layout_width="45px"
+                        android:layout_height="45px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_2" />
+
+                    <TextView
+                        android:id="@+id/sorttitle_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_toRightOf="@id/imageicon_2"
+                        android:text="@string/home_bus2"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+                <com.edu.pu.cs.couponapp.GridViewHome
+                    android:id="@+id/gridview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
+
+            <LinearLayout
+                android:id="@+id/btlinearlayout_3"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sort_title_back">
+
+                    <ImageView
+                        android:id="@+id/imageicon_3"
+                        android:layout_width="45px"
+                        android:layout_height="20sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_3" />
+
+                    <TextView
+                        android:id="@+id/sorttitle_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_toRightOf="@id/imageicon_3"
+                        android:text="@string/home_bus3"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.edu.pu.cs.couponapp.GridViewHome
+                android:id="@+id/gridview3"
+                android:layout_width="match_parent"
+                android:layout_height="120sp"
+                android:background="@color/white"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

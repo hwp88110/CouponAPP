@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@color/coupon_background"
+    tools:context="com.edu.pu.cs.couponapp.DetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_orange"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:id="@+id/titleblue">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="backbtn"
+                android:background="@drawable/back" />
+            <ImageView
+                android:id="@+id/titlelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                />
+            <Button
+                android:id="@+id/others"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/others"
+                />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleblue"
+        android:id="@+id/scorll"
+        android:layout_above="@+id/more"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/titleblue">
+
+            <TextView
+                android:id="@+id/textView"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:id="@+id/line"
+                android:layout_marginTop="5px"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+
+                android:layout_below="@id/textView"
+                android:background="@color/listline" />
+
+            <com.edu.pu.cs.couponapp.GridViewDetails
+                android:id="@+id/detailsgrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/coupon_background"
+                android:columnWidth="400dp"
+                android:gravity="center"
+
+                android:numColumns="1"
+
+
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+
+                />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_marginTop="0dip"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginBottom="10sp"
+                android:layout_below="@id/textView"
+                android:background="@color/listline"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/detail_bigline" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/detail_notice"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                />
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_marginTop="0dip"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:background="@color/listline"
+                android:layout_below="@id/textView"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="TextView"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/detailstext_color" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/shake2share"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/background_color_orange" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more"
+        rv_centered="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="#ea5413"
+            fancy:fb_focusColor="#ff5b14"
+            fancy:fb_fontIconResource="&#xf08a;"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="加入最爱"
+            fancy:fb_textColor="#FFFFFF"
+            />
+    </com.andexert.library.RippleView>
+
+</RelativeLayout>

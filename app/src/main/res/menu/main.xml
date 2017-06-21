@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.menutest03.MainActivity" >
+
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:icon="@drawable/share"
+        android:title="@string/menu_share"/>
+    <item
+        android:id="@+id/map"
+        android:orderInCategory="100"
+        android:icon="@drawable/googlemaps_fill"
+        android:title="@string/menu_map"/>
+
+    <item
+        android:id="@+id/home"
+        android:orderInCategory="100"
+        android:icon="@drawable/home_fill"
+        android:title="@string/menu_home"/>
+
+</menu>
